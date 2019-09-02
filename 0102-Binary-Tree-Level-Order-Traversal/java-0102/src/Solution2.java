@@ -22,8 +22,8 @@ class Solution2 {
 
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
-        int levelNum = 1;
-
+//         int levelNum = 1;
+        int levelNum=queue.size();
         while(!queue.isEmpty()){
 
             int newLevelNum = 0;
@@ -34,16 +34,16 @@ class Solution2 {
 
                 if(node.left != null){
                     queue.add(node.left);
-                    newLevelNum ++;
+//                     newLevelNum ++;
                 }
                 if(node.right != null){
                     queue.add(node.right);
-                    newLevelNum ++;
+//                     newLevelNum ++;
                 }
             }
 
             res.add(level);
-            levelNum = newLevelNum;
+//             levelNum = newLevelNum;
         }
 
         return res;
